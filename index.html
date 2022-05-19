@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	    <title>P2P Video Record</title>
+		    <meta charset="UTF-8" />
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+		    <script src="js/jquery-3.5.1.min.js"></script>
+
+			<!-- <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script> -->
+			<script src="js/peerjs.min.js"></script>
+
+			<!-- Page scripts -->
+			<script src="js/script.js"></script>
+		<title>Peer to peer</title>
+	</head>
+	<body>
+	  <p>Your ID:</p>
+	  <p id="uuid"></p>
+	  <input type="text" placeholder="Peer id" />
+	  <br><br>
+
+	  <button class='autorecOn'>autorecOn</button>
+	  <button class='autorecOff'>autorecOff</button>
+
+	  <div id="video-list"></div>
+
+	  <style type="text/css">
+
+			#video-list{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			/*==================================*/
+			#live {
+			  position: absolute;
+			  top: 100px;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  width: 100%;
+			  height: 100%;
+			  background-color: #000;
+			  display: none;
+			}
+			#local-video {
+			  position: absolute;
+			  bottom: 0;
+			  left: 0;
+			  width: 250px;
+			  -webkit-transform: scaleX(-1);
+			  transform: scaleX(-1);
+			  margin: 16px;
+			  border: 2px solid #fff;
+			}
+			#remote-video {
+			  position: absolute;
+			  max-width: 100%;
+			  height: 100%;
+			  top: 50%;
+			  left: 50%;
+			  transform: translate(-50%, -50%);
+			}
+			#end-call {
+			  position: absolute;
+			  bottom: 0;
+			  right: 0;
+			  padding: 8px;
+			  background-color: red;
+			  color: white;
+			  border: none;
+			  margin: 16px;
+			}
+	  </style>					
+	</body>
+</html>
