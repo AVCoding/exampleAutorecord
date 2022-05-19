@@ -78,7 +78,7 @@
   });
 
   peer.on('error', function(){
-    alert('Peer on error  (internet included) myID - ' myID);
+    alert('Peer on error  (internet included) myID - ' + myID);
     if (document.querySelector("#videoCaller-" + myID)) {
       document.querySelector("#videoCaller-" + myID).remove();
     }
